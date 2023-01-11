@@ -12,8 +12,8 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
-        <h1 className="hero__title">
-          <span>Lit-cn</span>. <span>startrace</span>. <span>games</span>
+        <h1 className={styles.title+ " hero__title"}>
+          <span>Lit-cn</span>.<span>startrace</span>.<span>games</span>
         </h1>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.start}>
@@ -22,11 +22,12 @@ function HomepageHeader() {
             开始
           </Link>
         </div>
+        <div className={styles.eng}>
+          <Link href='//lit.dev/docs/' >
+            英文文档
+          </Link>
+        </div>
 
-        <Link href='//lit.dev/docs/' style={{ color: "var(--ifm-background-color)", display: "block", marginTop: "20px" }}>
-          <span>英文文档
-          </span>
-        </Link>
       </div>
     </header>
   );

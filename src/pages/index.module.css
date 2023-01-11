@@ -17,9 +17,16 @@
   justify-content: center;
   transform: scale(1.1);
 }
-.start{
+
+.start {
   margin: 2em;
 }
+
+[data-theme="dark"] .start a {
+  color: black;
+
+}
+
 .start a {
   background-color: aliceblue;
   padding: .8em 1.6em;
@@ -27,10 +34,21 @@
   border-radius: 2em;
   transition: .3s;
   width: fit-content;
-  text-align: center;
 }
 
 .start a:hover {
-  background-color: #dedede;
+  background-color: #eaeaea;
   border-radius: .1em;
+}
+
+.eng a {
+  color: aliceblue;
+}
+
+[data-theme="dark"] .eng a {
+  color: rgb(0, 0, 0)
+}
+
+.title>span {
+  white-space: nowrap;
 }
