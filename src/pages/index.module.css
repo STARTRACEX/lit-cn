@@ -17,3 +17,20 @@
   justify-content: center;
   transform: scale(1.1);
 }
+.start{
+  margin: 2em;
+}
+.start a {
+  background-color: aliceblue;
+  padding: .8em 1.6em;
+  font-size: large;
+  border-radius: 2em;
+  transition: .3s;
+  width: fit-content;
+  text-align: center;
+}
+
+.start a:hover {
+  background-color: #dedede;
+  border-radius: .1em;
+}
