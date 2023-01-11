@@ -52,7 +52,7 @@ import {LitElement, html} from 'https://cdn.jsdelivr.net/gh/lit/dist@2/core/lit-
 
 要浏览捆绑包,请转到 <https://cdn.jsdelivr.net/gh/lit/dist/> 并使用下拉菜单转到特定版本的页面.在该页面上,该版本可用的每种捆绑包类型都有一个目录.有两种类型的捆绑包:
 
-| coore | <https://cdn.jsdelivr.net/gh/lit/dist@2/core/lit-core.min.js>`core`导出与 `lit` 包的主模块相同的模块 |  
+| core | <https://cdn.jsdelivr.net/gh/lit/dist@2/core/lit-core.min.js>`core`导出与 `lit` 包的主模块相同的模块 |  
 | --- | --- |
 | all | <https://cdn.jsdelivr.net/gh/lit/dist@2/all/lit-all.min.js>`all` 导出`core`中的全部内容和大多数`lit`的其他模块. |
 
