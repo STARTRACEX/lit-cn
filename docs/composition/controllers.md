@@ -59,9 +59,9 @@ class ClockController implements ReactiveController {
   private host: ReactiveControllerHost;
 
   constructor(host: ReactiveControllerHost) {
-    // Store a reference to the host
+    // 储存对host的引用
     this.host = host;
-    // Register for lifecycle updates
+    // 注册生命周期更新
     host.addController(this);
   }
 }
@@ -70,9 +70,9 @@ class ClockController implements ReactiveController {
 ```js
 class ClockController {
   constructor(host) {
-    // Store a reference to the host
+    // 储存对host的引用
     this.host = host;
-    // Register for lifecycle updates
+    // 注册生命周期更新
     host.addController(this);
   }
 }
@@ -225,8 +225,7 @@ const resizeDirective = directive(ResizeDirective);
 export class ResizeController {
   /* ... */
   observe() {
-    // Pass a reference to the controller so the directive can
-    // notify the controller on size changes.
+    // //将引用传递给控制器,以便指令可以通知控制器大小更改.
     return resizeDirective(this);
   }
 }

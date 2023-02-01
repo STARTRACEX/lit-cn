@@ -25,17 +25,17 @@ customElements.define('my-element', MyElement);
 
 ## 内置修饰器
 
-| 修饰器 | 描述 |
-| --- | --- |
-| `@customElement` | 定义一个自定义元素 |
-| `@eventOptions` | 添加事件监听器选项 |
-| `@property` | 定义公共属性 |
-| `@state` | 定义私有状态属性 |
-| `@query` | 定义一个属性,该属性返回组件模板中元素的属性 |
-| `@queryAll` | 定义一个属性,该属性返回组件模板中的元素列表 |
-| `@queryAsync` | 定义一个属性,该属性返回解析为组件模板中元素的Promise |
-| `@queryAssignedNodes` | 查询分配给插槽的节点 |
-| `@queryAssignedNodes` | 定义一个属性,该属性返回分配给特定的slot|
+| 修饰器                | 描述                                                 |
+| --------------------- | ---------------------------------------------------- |
+| `@customElement`      | 定义一个自定义元素                                   |
+| `@eventOptions`       | 添加事件监听器选项                                   |
+| `@property`           | 定义公共属性                                         |
+| `@state`              | 定义私有状态属性                                     |
+| `@query`              | 定义一个属性,该属性返回组件模板中元素的属性          |
+| `@queryAll`           | 定义一个属性,该属性返回组件模板中的元素列表          |
+| `@queryAsync`         | 定义一个属性,该属性返回解析为组件模板中元素的Promise |
+| `@queryAssignedNodes` | 查询分配给插槽的节点                                 |
+| `@queryAssignedNodes` | 定义一个属性,该属性返回分配给特定的slot              |
 
 ## 导入修饰器
 

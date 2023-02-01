@@ -5,14 +5,14 @@ sidebar_position: 2
 
 下面是一个快速参考
 
-| 类型 | 示例 |
-| --- | --- |
-| 子节点 | ```html`<h1>Hello ${name}</h1><ul>${listItems}</ul>` ``` |
-| 属性 | ```html`<input type="text" value="${name}">` ``` |
-| 布尔属性 | ```html`<div ?hidden=${!show}></div>` ```|
-| Properties | ```html`<input .value=${name}>` ``` |
-| 事件监听 | ```html`<button @click=${this._clickHandler}>Go</button>` ```|
-| 元素指令 | ```html`<input ${ref(inputRef)}>` ```|
+| 类型       | 示例                                                          |
+| ---------- | ------------------------------------------------------------- |
+| 子节点     | ```html`<h1>Hello ${name}</h1><ul>${listItems}</ul>` ```      |
+| 属性       | ```html`<input type="text" value="${name}">` ```              |
+| 布尔属性   | ```html`<div ?hidden=${!show}></div>` ```                     |
+| Properties | ```html`<input .value=${name}>` ```                           |
+| 事件监听   | ```html`<button @click=${this._clickHandler}>Go</button>` ``` |
+| 元素指令   | ```html`<input ${ref(inputRef)}>` ```                         |
 [此基本示例](https://lit.dev/playground/#sample=docs/templates/expressions)显示了各种不同类型的表达式
 
 以下各节更详细地介绍了每种表达式
@@ -43,7 +43,7 @@ html`<main>${bodyText}</main>`
 
 Lit 可以呈现几乎所有基元值,并在插入文本内容时将它们转换为字符串.
 
-像`5`这样的数字值将呈现字符串`"5"`.Bigint的处理方式类似
+像`5`这样的数字值将呈现字符串`"5"`. Bigint的处理方式类似
 
 布尔值`true`将呈现`"true"`,`false`将呈现`"false"`,但呈现这样的布尔值并不常见.相反,布尔值通常在条件中用于呈现其他适当的值.
 
@@ -221,7 +221,7 @@ html`<button ${ref(this.myRef)}`;
 - 模板不应包含未关闭的元素 - 它们将由 HTML 解析器关闭
 
 ```js
-// HTML解析器在"某些文本"之后关闭此div
+// HTML解析器在"Some text"之后关闭此div
 const template1 = html`<div class="broken-div">Some text`;
 // 连接时,"more text"不会以.brued-div结尾
 const template2 = html`${template1} more text. </div>`;

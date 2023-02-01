@@ -189,7 +189,7 @@ this.requestUpdate();
 
 默认情况下,Lit 会设置与每个公共反应属性对应的观察属性,并在属性更改时更新该属性.也可以选择反映属性(写回属性)
 
-虽然元素属性可以是任何类型,但属性始终是字符串.这会影响非字符串属性的观察属性和反射属性:
+虽然反映属性可以是任何类型,但观察属性始终是字符串.这会影响非字符串属性的观察属性和反射属性:
 
 - 若要观察属性(从attribute设置property),必须从字符串转换属性值以匹配属性类型.
 
@@ -202,7 +202,7 @@ this.requestUpdate();
 默认情况下,Lit 为所有公共反应属性创建相应的观察属性,观察到的属性的名称是小写的属性名称
 
 ```js
-// 观察的属性是 "myvalue" <my-element myvalue=0 />
+// 观察的属性是 "myvalue"
 static properties = {
   myValue: { type: Number },
 };
@@ -214,32 +214,9 @@ constructor() {
 ```
 
 ```ts
-// 观察的属性是 "myvalue" <my-element myvalue=0 />
+// 观察的属性是 "myvalue"
 @property({ type: Number }) myValue = 0;
 ```
-
-<details>
-
-当然也可以使用其他语言(可观察为原文)
-
-```js
-// <my-element 我的值=0 />
-static properties = {
-  myValue: { type: Number },
-};
-
-constructor() {
-  super();
-  this.myValue = 0;
-}
-```
-
-```ts
-// <my-element 我的值=0 />
-@property({ type: Number }) 我的值 = 0;
-```
-
-</details>
 
 要创建具有不同名称的观察属性,请设置`attribute`为字符串
 

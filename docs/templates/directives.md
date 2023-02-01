@@ -13,7 +13,7 @@ sidebar_position: 5
 <tr>
 
 <td>
-Import
+引入
 </td>
 <td>
 
@@ -626,7 +626,7 @@ class MyElement extends LitElement {
   size: string | undefined = undefined;
 
   render() {
-    // src attribute not rendered if either size or filename are undefined
+    // 如果未定义大小或文件名，则不呈现src属性
     return html`<img src="/images/${ifDefined(this.size)}/${ifDefined(this.filename)}">`;
   }
 }
@@ -646,7 +646,7 @@ class MyElement extends LitElement {
   }
 
   render() {
-    // src attribute not rendered if either size or filename are undefined
+    // 如果未定义大小或文件名，则不呈现src属性
     return html`<img src="/images/${ifDefined(this.size)}/${ifDefined(this.filename)}">`;
   }
 }

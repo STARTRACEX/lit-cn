@@ -43,7 +43,7 @@ render() {
 
 为了获得从组件的槽子级以及通过组件模板呈现到shadow DOM中的子级发出的事件通知,可以使用标准的`addEventListener` DOM方法向组件本身添加监听器.有关详细信息,请参阅MDN上的[EventTarget.addEventListener](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
 
-是组件上添加事件监听器的好地方是constructor()
+在组件上添加事件监听器的好地方是constructor()
 
 ```js
 constructor() {
@@ -56,7 +56,9 @@ constructor() {
 
 但是,当组件上的事件监听器听到从组件的shadow DOM触发的事件时,会重新定位这些事件.这意味着事件目标是组件本身.有关详细信息,请参阅[在shadow DOM中处理事件](https://lit.dev/docs/components/events/#shadowdom).
 
-重新定位可能会干扰事件委托,为了避免这种情况,可以将事件监听器添加到组件的shadow root本身.由于`shadowRoot`在构造函数中不可用,因此可以在`createRenderRoot`方法中添加事件监听器,如下所示.请注意,确保从`createRenderRoot`方法返回shadow root非常重要.
+重新定位可能会干扰事件委托,为了避免这种情况,可以将事件监听器添加到组件的shadow root本身.由于`shadowRoot`在构造函数中不可用,因此可以在`createRenderRoot`方法中添加事件监听器,如下示例所示.
+
+请注意,确保从`createRenderRoot`方法返回shadow root非常重要.
 
 [示例](https://lit.dev/playground/#sample=docs/components/events/host)
 
@@ -104,7 +106,7 @@ disconnectedCallback() {
 
 ```js
 async firstUpdated() {
-  // Give the browser a chance to paint
+  // 给浏览器绘制机会
   await new Promise((r) => setTimeout(r, 0));
   this.addEventListener('click', this._handleClick);
 }

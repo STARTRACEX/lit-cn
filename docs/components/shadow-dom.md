@@ -19,7 +19,7 @@ Shadow DOM有三个好处:
 
 Lit将组件渲染到其renderRoot(默认情况下为shadow root).要查找内部元素,可以使用DOM查询API,例如this.renderRoot.querySelector().
 
-`renderRoot`应始终是影子根或元素,它们共享 API 如 `querySelectorAll()`和.children``
+`renderRoot`应始终是影子根或元素,它们共享 API 如 `querySelectorAll()`和`.children`
 
 使用`this.renderRoot.querySelector()`查询内部元素
 

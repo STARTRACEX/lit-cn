@@ -16,7 +16,7 @@ Mixin可以被认为是"子类工厂"应用于并返回一个子类,该子类通
 
 ```ts
 const MyMixin = (superClass) => class extends superClass {
-  /* class fields & methods to extend superClass with */
+  /* 用于扩展超类的类字段和方法 */
 };
 ```
 
@@ -137,10 +137,10 @@ export const MyMixin = <T extends Constructor<LitElement>>(superClass: T) => {
       this.doSomethingPrivate();
     }
     private doSomethingPrivate() {
-      /* does not need to be part of the interface */
+      /* 不需要是接口的一部分 */
     }
   };
-  // Cast return type to the superClass type passed in
+  // 将返回类型强制转换为传入的超累类型
   return MyMixinClass as T;
 }
 ```
@@ -150,7 +150,7 @@ export const MyMixin = <T extends Constructor<LitElement>>(superClass: T) => {
 如果您的mixin确实添加了新的受保护的或公共的API,您需要用户能够在其类上使用这些API,那么您需要单独定义mixin的接口和实现,并将返回类型转换为mixin接口和超级类类型的交集:
 
 ```ts
-// Define the interface for the mixin
+// 定义mixin的接口
 export declare class MyMixinInterface {
   highlight: boolean;
   protected renderHighlight(): unknown;
@@ -163,7 +163,7 @@ export const MyMixin = <T extends Constructor<LitElement>>(superClass: T) => {
       /* ... */
     }
   };
-  // Cast return type to your mixin's interface intersected with the superClass type
+  // 将返回类型强制转换为与超类类型相交的mixin接口
   return MyMixinClass as Constructor<MyMixinInterface> & T;
 }
 ```
@@ -178,7 +178,7 @@ TypeScript 中的 mixins 需要声明一个类然后返回它，而不是直接�
 
 ```ts
 export const MyMixin = <T extends LitElementConstructor>(superClass: T) => {
-  // ✅ Defining a class in a function body, and then returning it
+  // ✅ 在函数体中定义类，然后返回
   class MyMixinClass extends superClass {
     @property()
     mode = 'on';
@@ -192,7 +192,7 @@ export const MyMixin = <T extends LitElementConstructor>(superClass: T) => {
 
 ```ts
 export const MyMixin = <T extends LitElementConstructor>(superClass: T) =>
-  // ❌ Returning class expression direcly using arrow-function shorthand
+  // ❌ 使用箭头函数简写直接返回类表达式
   class extends superClass {
     @property()
     mode = 'on';
